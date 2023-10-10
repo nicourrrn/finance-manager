@@ -2,6 +2,10 @@ from django.views import generic
 from django.urls import reverse_lazy
 
 from .models import Operation, Category
+from .mixins import CounterMinix
+
+class CounterView(CounterMinix, generic.TemplateView):
+    template_name = "app/counter.html"
 
 class IndexPageView(generic.TemplateView):
     template_name = "app/index.html"

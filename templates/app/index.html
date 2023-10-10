@@ -10,16 +10,15 @@
         <div class="wrapper">
             <header class="header">
                 <ul>
-                    <li><button hx-get="{% url 'categories' %}"
-                            hx-trigger='click' hx-target="#main" 
-                            hx-swap="innerHTML">Categories</button></li>
-                    <li><button hx-get="{% url 'operations' %}"
-                            hx-trigger='click' hx-target="#main"
-                            hx-swap="innerHTML">Operations</button></li>
+                    <li><button hx-get="{% url 'categories' %}"hx-target="#main">
+                            Categories</button></li>
+                    <li><button hx-get="{% url 'operations' %}" hx-target="#main">
+                            Operations</button></li>
                 </ul>
             </header>
             <main class="main" id='main'>
                 <h1>Hello from main page</h1>
+                <div hx-get="{% url 'counter' %}" hx-trigger="every 1s">
             </main>
             <footer class="footer">
             </footer>
