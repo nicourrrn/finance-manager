@@ -1,0 +1,28 @@
+<!doctype html>
+ <html lang="en">
+     <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+         <title>Finance Manager</title>
+     </head>
+     <body>
+        <div class="wrapper">
+            <header class="header">
+                <ul>
+                    <li><button hx-get="{% url 'categories' %}"
+                            hx-trigger='click' hx-target="#main" 
+                            hx-swap="innerHTML">Categories</button></li>
+                    <li><button hx-get="{% url 'operations' %}"
+                            hx-trigger='click' hx-target="#main"
+                            hx-swap="innerHTML">Operations</button></li>
+                </ul>
+            </header>
+            <main class="main" id='main'>
+                <h1>Hello from main page</h1>
+            </main>
+            <footer class="footer">
+            </footer>
+        </div> 
+     </body>
+ </html>

@@ -1,0 +1,8 @@
+<h1>Operations</h1>
+<ul>
+{% for operation in operations %}
+    <li><a href={% url 'operation' operation.id %}>{{ operation }}</a></li>
+{% empty %}
+    <h2>No categories yet.</h2>
+{% endfor %}
+</ul>
