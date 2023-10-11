@@ -1,6 +1,8 @@
 from django.db import models
 from datetime import datetime
 
+from .managers import ReversedManager
+
 class Category(models.Model):
     name = models.CharField(max_length=50)
     ico_name = models.CharField(max_length=16, default="none.png") 
@@ -14,6 +16,8 @@ class Operation(models.Model):
     cost = models.IntegerField()
     timestamp = models.DateTimeField(default=datetime.today)
     desctiption = models.TextField(default="")
+
+    objects = ReversedManager()
 
     def __str__(self) -> str:
         resp = self.short_description

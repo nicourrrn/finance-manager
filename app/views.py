@@ -16,6 +16,8 @@ class OperationListView(generic.ListView):
     paginate_by = 100
     context_object_name = "operations"
 
+    
+
 class OperationCreateView(BaseUrlMixin, generic.CreateView):
     model = Operation 
     success_url = reverse_lazy("operations") 
