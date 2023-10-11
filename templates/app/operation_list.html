@@ -1,7 +1,13 @@
+<title>Operations</title>
+
 <h1>Operations</h1>
+<div hx-get="{% url 'create_operation' %}" hx-trigger="load">
+   Loading... 
+</div>
 <ul>
+    <li><a hx-get="{% url 'create_operation' %}" hx-target="#main">Create new operation </a></li>
 {% for operation in operations %}
-    <li><a href={% url 'operation' operation.id %}>{{ operation }}</a></li>
+    <li>{{ operation }}</li>
 {% empty %}
     <h2>No categories yet.</h2>
 {% endfor %}

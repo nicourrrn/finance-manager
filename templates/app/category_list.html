@@ -1,7 +1,12 @@
+<title>Categories</title>
+
 <h1>Categories</h1>
+<div hx-get="{% url 'create_category' %}" hx-trigger="load">
+   Loading... 
+</div>
 <ul>
 {% for category in categories %}
-    <li><a href={% url 'category' category.id %}>{{ category }}</a></li>
+    <li>{{ category }}</li>
 {% empty %}
     <h2>No categories yet.</h2>
 {% endfor %}

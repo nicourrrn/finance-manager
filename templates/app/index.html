@@ -4,16 +4,16 @@
          <meta charset="utf-8">
          <meta name="viewport" content="width=device-width, initial-scale=1">
          <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+         <script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
          <title>Finance Manager</title>
      </head>
      <body>
         <div class="wrapper">
             <header class="header">
-                <ul>
-                    <li><button hx-get="{% url 'categories' %}"hx-target="#main">
-                            Categories</button></li>
-                    <li><button hx-get="{% url 'operations' %}" hx-target="#main">
-                            Operations</button></li>
+                <ul hx-target="#main" hx-push-url="true">
+                    <li><a hx-get="{% url 'counter' %}" > Counter </a> </li>
+                    <li><a hx-get="{% url 'categories' %}"> Categories </a> </li>
+                    <li><a hx-get="{% url 'operations' %}"> Operations </a> </li>
                 </ul>
             </header>
             <main class="main" id='main'>
