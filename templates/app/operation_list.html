@@ -4,11 +4,23 @@
 <div hx-get="{% url 'create_operation' %}" hx-trigger="load">
    Loading... 
 </div>
-<ul>
-    <li><a hx-get="{% url 'create_operation' %}" hx-target="#main">Create new operation </a></li>
+<table>
+    <tr>
+        <th scope="col">Short desc</th>
+        <th scope="col">Category</th>
+        <th scope="col">Cost</th>
+        <th scope="col">DateTime</th>
+        <th scope="col">Full description</th>
+    </tr>
 {% for operation in operations %}
-    <li>{{ operation }}</li>
+<tr>
+    <td> {{ operation.short_description }} </td>
+    <td> {{ operation.category }}</td>
+    <td> {{ operation.cost }}</td>
+    <td> {{ operation.timestamp }}</td>
+    <td> {{ operation.desctiption  }}</td>
+</tr>
 {% empty %}
-    <h2>No categories yet.</h2>
+    <tr>No data</tr>
 {% endfor %}
-</ul>
+</table>

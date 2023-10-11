@@ -5,15 +5,17 @@
          <meta name="viewport" content="width=device-width, initial-scale=1">
          <script src="https://unpkg.com/htmx.org@1.9.6"></script>
          <script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
+         {% load static %}
+         <link rel="stylesheet" href="{% static 'main.css' %}">
          <title>Finance Manager</title>
      </head>
      <body>
         <div class="wrapper">
             <header class="header">
-                <ul hx-target="#main" hx-push-url="true">
-                    <li><a hx-get="{% url 'counter' %}" > Counter </a> </li>
-                    <li><a hx-get="{% url 'categories' %}"> Categories </a> </li>
-                    <li><a hx-get="{% url 'operations' %}"> Operations </a> </li>
+                <ul class="header__bar" hx-target="#main" hx-push-url="true">
+                    <li class="bar__element"><a hx-get="{% url 'counter' %}" > Counter </a> </li>
+                    <li class="bar__element"><a hx-get="{% url 'categories' %}"> Categories </a> </li>
+                    <li class="bar__element"><a hx-get="{% url 'operations' %}"> Operations </a> </li>
                 </ul>
             </header>
             <main class="main" id='main'>

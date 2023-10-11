@@ -4,10 +4,17 @@
 <div hx-get="{% url 'create_category' %}" hx-trigger="load">
    Loading... 
 </div>
-<ul>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Doings</th>
+    </tr>
 {% for category in categories %}
-    <li>{{ category }}</li>
+<tr>
+    <td> {{ category.name }} </td> 
+    <td></td>
+</tr>
 {% empty %}
-    <h2>No categories yet.</h2>
+    <td>No categories yet.</td>
 {% endfor %}
-</ul>
+</table>

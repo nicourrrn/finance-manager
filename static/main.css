@@ -1,0 +1,27 @@
+body .wrapper {
+    width: 100%; 
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    margin: 0 auto;
+}
+
+.header__bar {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+
+.main {
+    width: 1048px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
