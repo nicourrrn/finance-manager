@@ -3,9 +3,11 @@ from datetime import datetime
 
 from .managers import ReversedManager
 
+
 class Category(models.Model):
     name = models.CharField(max_length=50)
-    ico_name = models.CharField(max_length=16, default="none.png") 
+    ico = models.ImageField(upload_to='category_icons',
+                            default='default.png')
 
     def __str__(self) -> str:
         return str(self.name)

@@ -6,11 +6,13 @@
 </div>
 <table>
     <tr>
+        <th>Icon</th>
         <th>Name</th>
         <th>Doings</th>
     </tr>
 {% for category in categories %}
 <tr>
+    <td> <img class="icon" src='/media/{{ category.ico }}'/> </td> 
     <td> {{ category.name }} </td> 
     <td></td>
 </tr>

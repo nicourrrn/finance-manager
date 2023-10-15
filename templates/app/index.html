@@ -13,14 +13,12 @@
         <div class="wrapper">
             <header class="header">
                 <ul class="header__bar" hx-target="#main" hx-push-url="true">
-                    <li class="bar__element"><a hx-get="{% url 'counter' %}" > Counter </a> </li>
                     <li class="bar__element"><a hx-get="{% url 'categories' %}"> Categories </a> </li>
                     <li class="bar__element"><a hx-get="{% url 'operations' %}"> Operations </a> </li>
                 </ul>
             </header>
             <main class="main" id='main'>
                 <h1>Hello from main page</h1>
-                <div hx-get="{% url 'counter' %}" hx-trigger="every 1s">
             </main>
             <footer class="footer">
             </footer>
